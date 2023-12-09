@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextNoteInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Enter your note here..."
+        android:inputType="textMultiLine|textCapSentences"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColorHint="#8D6E63"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNoteInput"
+        android:layout_centerHorizontal="true"
+        android:text="Add Note"
+        tools:ignore="HardcodedText" />
+
+    <!-- Add this EditText for search functionality -->
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddNote"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/search_notes"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:autofillHints="" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddNote"
+        android:layout_marginTop="60dp" />
+
+    <!-- TextView to display "No results found" -->
+    <TextView
+        android:id="@+id/textNoResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="No matching results found"
+        android:textAppearance="?android:textAppearanceMedium"
+        tools:visibility="visible" />
+
+</RelativeLayout>

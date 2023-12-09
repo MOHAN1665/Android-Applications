@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sticky_note_bg">
+
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:hint="@string/enter_your_note_here"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxLines="5"
+        android:padding="8dp"
+        android:textColorHint="#DD2C00"
+        android:textSize="16sp"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Delete button/icon -->
+    <ImageButton
+        android:id="@+id/btnDeleteNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/delete_button_description"
+        android:padding="8dp"
+        android:src="@drawable/ic_delete"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!-- Your pin icon button -->
+    <ImageButton
+        android:id="@+id/btnPinNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pin"
+        android:contentDescription="@string/pin_note"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"/>
+</RelativeLayout>

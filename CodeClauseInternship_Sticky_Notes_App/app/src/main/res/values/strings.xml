@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sticky Notes App</string>
+    <string name="enter_your_note_here">Enter your note here...</string>
+    <string name="delete_button_description">delete</string>
+    <string name="search_notes">Search notes...</string>
+    <string name="pin_note">Pin Note</string>
+</resources>
